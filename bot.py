@@ -53,7 +53,7 @@ async def on_message(message):
         await message.channel.send(summon[randomNum])
 
     if message.content.startswith('=작성'):
-        file = openpyxl.load_workbook("book-of-Magic_bot\지식.xlsx")
+        file = openpyxl.load_workbook("book-of-Magic_bot\data.xlsx")
         sheet = file.active
         learn = message.content.split(" ")
         for i in range(1, 255):
@@ -61,11 +61,11 @@ async def on_message(message):
                 sheet["A" + str(i)].value = learn[1]
                 sheet["B" + str(i)].value = learn[2]
                 break
-        file.save("book-of-Magic_bot\지식.xlsx")
+        file.save("book-of-Magic_bot\data.xlsx")
         await message.channel.send('작성 완료!')
 
     if message.content.startswith('=독서'):
-        file = openpyxl.load_workbook("book-of-Magic_bot\지식.xlsx")
+        file = openpyxl.load_workbook("book-of-Magic_bot\data.xlsx")
         sheet = file.active
         memory = message.content.split(" ")
         for i in range(1, 255):
