@@ -45,11 +45,12 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         time.sleep(3)
         
-        summon = ["소환성공! (*・ω・)ﾉ\nhttps://tenor.com/view/%eb%ac%b4%ec%95%bc%ed%98%b8-%eb%ac%b4%ed%95%9c%eb%8f%84%ec%a0%84-%ec%95%b5%ec%bb%a4%eb%a6%ac%ec%a7%80-%ed%95%9c%ec%9d%b8%ed%9a%8c%ea%b4%80-%ea%b7%b8%eb%a7%8c%ed%81%bc-gif-20464026", "소환성공! (*・ω・)ﾉ\nhttps://tenor.com/view/%eb%a9%88%ec%b6%b0-gif-20730775", "소환성공! (*・ω・)ﾉ\nhttps://tenor.com/view/dancing-coffin-coffin-dance-funeral-funny-farewell-gif-16737844", "소환성공! (*・ω・)ﾉ\nhttps://tenor.com/view/nick-young-question-mark-huh-what-confused-gif-4995479", "소환성공! (*・ω・)ﾉ\nhttps://tenor.com/view/crying-black-guy-meme-sad-gif-11746329", "소환성공! (*・ω・)ﾉ\nhttps://tenor.com/view/%ed%83%9c%eb%b3%b4%ed%95%b4-taebo-diet-exercise-getting-fit-gif-14365603 ", "소환실패...(ﾉД`)"]
+        summon = ["https://tenor.com/view/%eb%ac%b4%ec%95%bc%ed%98%b8-%eb%ac%b4%ed%95%9c%eb%8f%84%ec%a0%84-%ec%95%b5%ec%bb%a4%eb%a6%ac%ec%a7%80-%ed%95%9c%ec%9d%b8%ed%9a%8c%ea%b4%80-%ea%b7%b8%eb%a7%8c%ed%81%bc-gif-20464026", "https://tenor.com/view/%eb%a9%88%ec%b6%b0-gif-20730775", "https://tenor.com/view/dancing-coffin-coffin-dance-funeral-funny-farewell-gif-16737844", "https://tenor.com/view/nick-young-question-mark-huh-what-confused-gif-4995479", "https://tenor.com/view/crying-black-guy-meme-sad-gif-11746329", "https://tenor.com/view/%ed%83%9c%eb%b3%b4%ed%95%b4-taebo-diet-exercise-getting-fit-gif-14365603 "]
 
         randomNum = random.randrange(0, len(summon))
         print("랜덤수 값 :" + str(randomNum))
         print(summon[randomNum])
+        await message.channel.send("소환성공! (*・ω・)ﾉ")
         await message.channel.send(summon[randomNum])
 
     if message.content.startswith('=작성'):
