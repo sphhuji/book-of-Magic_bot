@@ -25,7 +25,7 @@ async def on_message(message):
         await message.channel.send('음...그래, 뭐')
 
     if message.content.startswith('=제작자'):
-        await message.channel.send('허지#5733')
+        await message.channel.send('허지#0435')
 
     if message.content.startswith('=모렐로노미콘'):
         await message.channel.send('뭐, 좋아 좋지.')
