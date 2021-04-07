@@ -77,7 +77,11 @@ async def on_message(message):
 
     if message.content.startswith('=제작자'):
         await message.channel.send('허지#0435')
-
+        
+    if message.content.startswith('=서버'):
+        await message.channel.send('내 고향은 [삼위일체] 서버야!')
+        await message.channel.send('https://discord.gg/Zkh4gNYHS7')
+        
     if message.content.startswith('=모렐로노미콘'):
         await message.channel.send('뭐, 좋아 좋지.')
 
