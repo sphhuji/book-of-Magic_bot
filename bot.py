@@ -75,7 +75,7 @@ async def on_message(message):
     await bot.process_commands(message)
     
     if message.content.startswith('=도움말'):
-        embed=discord.Embed(title="마법의 책 사용법", description="너의 지식을 추가해주려면\n=작성 [단어] [뜻]\n(지식은 255개까지밖에 저장할 수 없고 띄어쓰기는 인식하지 못해!)\n\n책을 읽으려면\n=독서 [단어]\n\n무언가를 소환하고 싶으면 =소환 을 외쳐봐!\n\n새로 추가된 기능을 보고 싶으면 =패치노트 주문을 외워!\n\n핑을 확인하려면 =핑을 쳐봐!\n\n롤전적을 검색하고 싶으면 =롤전적 [닉네임]을 입력해!", color=0x62c1cc)
+        embed=discord.Embed(title="마법의 책 사용법", description="너의 지식을 추가해주려면\n=작성 [단어] [뜻]\n(지식은 255개까지밖에 저장할 수 없고 띄어쓰기는 인식하지 못해!)\n\n책을 읽으려면\n=독서 [단어]\n\n무언가를 소환하고 싶으면 =소환 을 외쳐봐!\n\n새로 추가된 기능을 보고 싶으면 =패치노트 주문을 외워!\n\n핑을 확인하려면 =핑을 쳐봐!\n\n롤전적을 검색하고 싶으면 =롤전적 [닉네임]을 입력해!\n\n=주사위로 주사위를 굴릴수 ", color=0x62c1cc)
 
         await message.channel.send(embed=embed)
 
