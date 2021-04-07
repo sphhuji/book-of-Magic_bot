@@ -76,7 +76,7 @@ async def on_message(message):
         await message.channel.send('음...그래, 뭐')
         
     if message.content.startswith('=핑' or '=ping'):
-        embed = discord.Embed(title = ':ping_pong: 퐁', description = str(client.latency) + '밀리초', color = 0x00ff00)
+        embed = discord.Embed(title = ':ping_pong: 퐁', description = str(bot.latency) + '밀리초', color = 0x00ff00)
         await message.channel.send(embed=embed)
        
     if message.content.startswith('=제작자'):
