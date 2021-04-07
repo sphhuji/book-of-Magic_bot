@@ -62,7 +62,7 @@ def deleteTags(htmls):
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"="))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"=도움말"))
     print(discord.__version__)
 
 @bot.event
