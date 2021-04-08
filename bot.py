@@ -78,6 +78,9 @@ async def on_message(message):
     if message.content.startswith('=크시'):
         await message.channel.send('음...그래, 뭐')
         
+    if message.content.startswith('=초대'):
+        await message.channel.send('https://discord.com/api/oauth2/authorize?client_id=826743049307684895&permissions=67226624&scope=bot')
+        
     if message.content.startswith('=핑'):
         embed = discord.Embed(title = ':ping_pong: 퐁', description = str(bot.latency) + '밀리초', color = 0x00ff00)
         await message.channel.send(embed=embed)
