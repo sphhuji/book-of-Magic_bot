@@ -304,6 +304,6 @@ async def on_message(message):
 @bot.command(pass_context=True)
 async def 주사위(ctx):
     num = random.randint(1, 6)
-    await ctx.send(str(num)+"(이)가 나왔어!")
+    await ctx.send(str(num)+"(이)가 나왔어! :game_die:")
 
 bot.run(os.environ['token'])
