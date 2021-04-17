@@ -109,8 +109,8 @@ async def on_message(message):
         await message.channel.send('ㅤ')
 
     if message.content.startswith('=패치노트'):
-        embed = discord.Embed(title="패치노트", description="1.롤 전적 기능 추가 (=롤전적 [닉네임])", color=0x62c1cc)
-        embed.set_footer(text="패치일 4월 7일")
+        embed = discord.Embed(title="패치노트", description="1. 랜덤 서버 링크, 랜덤 니트로 링크 추가\n=랜섭링 / =랜닡링\n물론 올바르지 않다고 뜰 확률이 높습니다 ㅎㅎ", color=0x62c1cc)
+        embed.set_footer(text="패치일 4월 17일")
 
         await message.channel.send(embed=embed)
 
