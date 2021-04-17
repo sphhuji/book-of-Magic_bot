@@ -3,6 +3,7 @@ import asyncio
 from discord.ext import commands
 import random
 import openpyxl
+import string
 import time
 import os
 from urllib.request import URLError
@@ -71,7 +72,7 @@ async def on_message(message):
     await bot.process_commands(message)
     
     if message.content.startswith('=도움말'):
-        embed=discord.Embed(title="마법의 책 사용법", description="너의 지식을 추가해주려면\n=작성 [단어] [뜻]\n(지식은 255개까지밖에 저장할 수 없고 띄어쓰기는 인식하지 못해!)\n\n책을 읽으려면\n=독서 [단어]\n\n무언가를 소환하고 싶으면 =소환 을 외쳐봐!\n\n새로 추가된 기능을 보고 싶으면 =패치노트 주문을 외워!\n\n핑을 확인하려면 =핑을 쳐봐!\n\n롤전적을 검색하고 싶으면 =롤전적 [닉네임]을 입력해!\n\n=주사위로 주사위를 굴릴 수 있어 ", color=0x62c1cc)
+        embed=discord.Embed(title="마법의 책 사용법", description="너의 지식을 추가해주려면\n=작성 [단어] [뜻]\n(지식은 255개까지밖에 저장할 수 없고 띄어쓰기는 인식하지 못해!)\n\n책을 읽으려면\n=독서 [단어]\n\n무언가를 소환하고 싶으면 =소환 을 외쳐봐!\n\n새로 추가된 기능을 보고 싶으면 =패치노트 주문을 외워!\n\n=롤전적 - 리그 오브 레전드의 전적을 검색할 수 있어!\nㄴ https://jhoplin7259.tistory.com/92 \n\n=랜섭링 / =랜닡링을 치면 무작위로 링크가 나와!\n랜섭링은 서버링크고 랜닡링은 니트로 링크인데 기대는 안 하는데 좋아 그냥 복권같은 거거든", color=0x62c1cc)
 
         await message.channel.send(embed=embed)
         
@@ -147,6 +148,33 @@ async def on_message(message):
            if sheet["A" + str(i)].value == memory[1]:
                await message.channel.send(sheet["B" + str(i)].value)
                break
+    if message.content.startswith("=랜섭링"):
+        aaa = 10
+ 
+        print("영어대소문자", string.ascii_letters)
+        print("숫자", string.digits)
+ 
+        pw_candidate = string.ascii_letters + string.digits
+ 
+        bbb = ""
+        for i in range(aaa):
+            bbb += random.choice(pw_candidate)
+ 
+        await message.channel.send("https://discord.gg/" + bbb)
+
+    if message.content.startswith("=랜닡링"):
+        aaa = 16
+ 
+        print("영어대소문자", string.ascii_letters)
+        print("숫자", string.digits)
+ 
+        pw_candidate = string.ascii_letters + string.digits
+ 
+        bbb = ""
+        for i in range(aaa):
+            bbb += random.choice(pw_candidate)
+ 
+        await message.channel.send("https://discord.gift/" + bbb)
             
     
     if message.content.startswith("=롤전적"):
