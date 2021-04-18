@@ -125,7 +125,7 @@ async def on_message(message):
         await message.channel.send('ㅤ')
 
     if message.content.startswith('=패치노트'):
-        embed = discord.Embed(title="패치노트", description="1. =서버목록 이 추가되었습니다. 이 명령어로 마법의 책 봇이 어디에 들어가있는지 확인할 수 있습니다.\n2. =시간 명령어입니다 현재 시각을 알려줍니다", color=0x62c1cc)
+        embed = discord.Embed(title="패치노트", description="1. =서버목록 이 추가되었습니다. 이 명령어로 마법의 책 봇이 어디에 들어가있는지 확인할 수 있습니다.\n2. =시간 명령어입니다 현재 시각을 알려줍니다\n3. 지식 최대용량을 늘림으로써 지식들이 초기화되었습니다. ", color=0x62c1cc)
         embed.set_footer(text="패치일 4월 18일")
 
         await message.channel.send(embed=embed)
@@ -148,7 +148,7 @@ async def on_message(message):
         file = openpyxl.load_workbook("지식.xlsx")
         sheet = file.active
         learn = message.content.split(" ")
-        for i in range(1, 255):
+        for i in range(1, 3000):
             if sheet["A" + str(i)].value == "-" or sheet["A" + str(i)].value == learn[1]:
                 sheet["A" + str(i)].value = learn[1]
                 sheet["B" + str(i)].value = learn[2]
@@ -160,7 +160,7 @@ async def on_message(message):
         file = openpyxl.load_workbook("지식.xlsx")
         sheet = file.active
         memory = message.content.split(" ")
-        for i in range(1, 255):
+        for i in range(1, 3000):
            if sheet["A" + str(i)].value == memory[1]:
                await message.channel.send(sheet["B" + str(i)].value)
                break
