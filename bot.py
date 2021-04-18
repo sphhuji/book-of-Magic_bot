@@ -12,6 +12,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from urllib.parse import quote
 import re
+import datetime
 import warnings
 
 tierScore = {
@@ -84,6 +85,21 @@ async def on_message(message):
         print("랜덤수 값 :" + str(randomNum))
         print(godjq[randomNum])
         await message.channel.send(godjq[randomNum])
+        
+    if message.content.startswith('=서버목록'):
+        list = []
+        for server in bot.guilds:
+            list.append(server.name)
+        await message.channel.send('지금 내가 들어가있는 서버는\n' + '\n'.join(list))
+
+    if message.content.startswith('=시간'):
+        a = datetime.datetime.today().year
+        b = datetime.datetime.today().month
+        c = datetime.datetime.today().day
+        d = datetime.datetime.today().hour
+        e = datetime.datetime.today().minute
+        
+        await message.channel.send('지금은 ' + str(a) + '년 ' + str(b) + '월 ' + str(c) + '일 ' + str(d) + '시 ' + str(e) + '분일걸...?')
 
     if message.content.startswith('=크시'):
         await message.channel.send('음...그래, 뭐')
