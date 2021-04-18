@@ -73,7 +73,7 @@ async def on_message(message):
     await bot.process_commands(message)
     
     if message.content.startswith('=도움말'):
-        embed=discord.Embed(title="마법의 책 사용법", description="너의 지식을 추가해주려면\n=작성 [단어] [뜻]\n(지식은 255개까지밖에 저장할 수 없고 띄어쓰기는 인식하지 못해!)\n\n책을 읽으려면\n=독서 [단어]\n\n무언가를 소환하고 싶으면 =소환 을 외쳐봐!\n\n새로 추가된 기능을 보고 싶으면 =패치노트 주문을 외워!\n\n=롤전적 - 리그 오브 레전드의 전적을 검색할 수 있어!\nㄴ https://jhoplin7259.tistory.com/92 \n\n=랜섭링 / =랜닡링을 치면 무작위로 링크가 나와!\n랜섭링은 서버링크고 랜닡링은 니트로 링크인데 기대는 안 하는데 좋아 그냥 복권같은 거거든", color=0x62c1cc)
+        embed=discord.Embed(title="마법의 책 사용법", description="너의 지식을 추가해주려면\n=작성 [단어] [뜻]\n(지식은 255개까지밖에 저장할 수 없고 띄어쓰기는 인식하지 못해!)\n\n책을 읽으려면\n=독서 [단어]\n\n무언가를 소환하고 싶으면 =소환 을 외쳐봐!\n\n새로 추가된 기능을 보고 싶으면 =패치노트 주문을 외워!\n\n=롤전적 - 리그 오브 레전드의 전적을 검색할 수 있어!\nㄴ https://jhoplin7259.tistory.com/92 \n\n=랜섭링 / =랜닡링을 치면 무작위로 링크가 나와!\n랜섭링은 서버링크고 랜닡링은 니트로 링크인데 기대는 안 하는데 좋아 그냥 복권같은 거거든\n\n=서버목록 이거는 내가 현재 들어가있는 서버를 알려줘!\n\n=시간 현재 시각을 알려주지 정확할걸..?", color=0x62c1cc)
 
         await message.channel.send(embed=embed)
         
@@ -125,8 +125,8 @@ async def on_message(message):
         await message.channel.send('ㅤ')
 
     if message.content.startswith('=패치노트'):
-        embed = discord.Embed(title="패치노트", description="1. 랜덤 서버 링크, 랜덤 니트로 링크 추가\n=랜섭링 / =랜닡링\n물론 올바르지 않다고 뜰 확률이 높습니다 ㅎㅎ", color=0x62c1cc)
-        embed.set_footer(text="패치일 4월 17일")
+        embed = discord.Embed(title="패치노트", description="1. =서버목록 이 추가되었습니다. 이 명령어로 마법의 책 봇이 어디에 들어가있는지 확인할 수 있습니다.\n2. =시간 명령어입니다 현재 시각을 알려줍니다", color=0x62c1cc)
+        embed.set_footer(text="패치일 4월 18일")
 
         await message.channel.send(embed=embed)
 
