@@ -359,4 +359,4 @@ async def 주사위(ctx):
     num = random.randint(1, 6)
     await ctx.send(str(num)+"(이)가 나왔어! :game_die:")
 
-bot.run(os.environ['token'])
+bot.run('MTI4MDA0ODYzNzk2NzIwODQ1OQ.G6hiFb.5nJj8wFpa9t1BjpTD9nVDDRI9ld8EWIrWcEZ2Y')
